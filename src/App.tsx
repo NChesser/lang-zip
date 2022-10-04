@@ -1,6 +1,13 @@
+/*
+	About: Main Component
+*/
 
-import React from "react";
-import "./App.css";
+// Components
+import Home from "./pages/Home";
+
+// Styles
+import "./assets/App.css";
+
 
 function App() {
 	return (
@@ -12,6 +19,7 @@ function App() {
 				By Nick Chesser
 			</p>
 
+			<Home />
 		</div>
 	);
 }
