@@ -1,0 +1,26 @@
+/* CSS For Layout Components */
+.toolbar {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+
+
+/* Card */
+.card {
+    width: 300px;
+    border: 2px solid red;
+    margin: 10px;
+}
+
+.card-description {
+    height: 50px;
+    padding: 10px;
+}
+
+.card-title {
+    height: 225px;
+    border: 1px solid black;
+}

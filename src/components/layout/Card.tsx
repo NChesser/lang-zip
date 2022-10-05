@@ -6,13 +6,18 @@ import * as React from 'react';
 
 const Card = ({ ...props }) => {
 
-    const { title } = props;
+    const { title, description } = props;
 
     return (
         <div className='card'>
-            <h2>
-                {title}
-            </h2>
+            <div className='card-description'>
+                {description}
+            </div>
+            <div className='card-title'>
+                <h2>
+                    {title}
+                </h2>
+            </div>
         </div>
     )
 };
