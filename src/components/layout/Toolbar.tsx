@@ -2,11 +2,9 @@
     About: Basic Card for displaying Items
 */
 
-import * as React from 'react';
-
 // Typing
 type Props = {
-    children?: JSX.Element | JSX.Element[]
+    children?: JSX.Element | JSX.Element[] | any
 };
 
 

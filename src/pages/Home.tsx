@@ -7,12 +7,12 @@ import * as React from 'react';
 // Components
 import Card from '../components/layout/Card';
 import CategoryTitle from '../components/general/CategoryTitle';
+import Grid from '../components/layout/Grid';
 
 // Typing
 type CardObj = {
     title: String
 };
-
 
 type CategoryProps = {
     category: String,
@@ -21,26 +21,24 @@ type CategoryProps = {
 
 
 const Category = ({ category, items }: CategoryProps) => {
-    console.log("🚀 ~ file: Home.tsx ~ line 15 ~ Category ~ items", items)
-
     return (
         <>
             <CategoryTitle title={category} />
-            {items.length && items.map(item => <Card title={item.title} />)}
+            <Grid>
+                {items.map(item => <Card {...item} />)}
+            </Grid>
         </>
     )
 };
-
 
 
 const Home = () => {
     // State Variables
     const [cards, setCards] = React.useState<Array<CardObj>>([]);
 
-
     // Functions
     const handleClick = () => {
-        const newCards = [...cards, { title: 'New Card Made ' + cards.length }];
+        const newCards = [...cards, { title: 'New Card Made ' + cards.length, description: 'Dreaming Spanish' }];
         setCards(newCards);
     };
 
@@ -56,5 +54,6 @@ const Home = () => {
         </>
     )
 };
+
 
 export default Home;

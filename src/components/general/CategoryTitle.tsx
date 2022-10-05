@@ -12,12 +12,8 @@ type CategoryTitleProps = {
 }
 
 const CategoryTitle = ({ title }: CategoryTitleProps) => {
-
     return (
-        <Toolbar>
-            <Title title={title} />
-            <br />
-        </Toolbar>
+        <Title title={title} />
     )
 };
 

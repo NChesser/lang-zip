@@ -4,21 +4,30 @@
 
 // Components
 import Home from "./pages/Home";
+import Toolbar from "./components/layout/Toolbar";
 
 // Styles
-import "./assets/App.css";
 import "./assets/styles/layout.css";
 
 
 function App() {
 	return (
 		<div>
-			<h3 className="title">
-				LangZip
-			</h3>
-			<p className="subtitle">
-				By Nick Chesser
-			</p>
+			<Toolbar>
+				<h1 className="title">
+					LangZip
+				</h1>
+				<a className="nav-link" href="google.com">
+					Start
+				</a>
+				<a className="nav-link" href="google.com">
+					Categories
+				</a>
+				<div style={{ flexGrow: 1 }} />
+				<a className="nav-link" href="google.com">
+					Language
+				</a>
+			</Toolbar>
 
 			<Home />
 		</div>
