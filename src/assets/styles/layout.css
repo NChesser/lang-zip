@@ -1,36 +1,130 @@
 /* CSS For Layout Components */
 
+/* General Utility Classes */
+.flex {
+    display: flex;
+    gap: var(--gap, 2rem);
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 2rem);
+}
+
+.container {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* General Styling Classes */
+.title {
+    color: hotpink;
+    margin-right: 50px;
+}
+
+.subtitle {
+    color: grey;
+}
+
+.text {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Titlebar */
+.primary-logo {
+    margin: 0;
+}
+
+.primary-title {
+    color: hotpink;
+    margin-right: 5rem;
+}
+
+.primary-header {
+    background-color: purple;
+    justify-content: space-between;
+}
+
+.primary-navigation {
+    background-color: orange;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-navigation a:hover {
+    text-decoration: underline;
+}
+
+
 /* Toolbar */
 .toolbar {
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
     display: inline-flex;
-    width: 95%;
+    width: min(100%);
     background-color: #2b2a27;
+    height: 75px;
 }
 
 /* Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    padding: 10px;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+
+/* Category */
+.category {
+    margin-bottom: 3rem;
 }
 
 
 /* Card */
 .card {
-    width: 300px;
-    border: 2px solid red;
-    margin: 10px;
+    width: 200px;
+    background-color: rgb(70, 70, 70, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.card:hover {
+    background-color: rgb(70, 70, 70, 0.5);
+}
+
+.card-image {
+    height: 175px;
+    border-radius: 0.5rem;
+    background-color: rgb(37, 0, 139);
 }
 
 .card-description {
-    height: 50px;
-    padding: 10px;
+    height: 65px;
+    margin-bottom: 0.5rem;
 }
 
-.card-title {
-    height: 225px;
-    border: 1px solid black;
+.card-title-text {
+    font-size: larger;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
 }

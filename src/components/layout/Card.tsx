@@ -15,20 +15,16 @@ const Card = ({ ...props }: CardProps) => {
 
     return (
         <div className='card'>
-            <div className='card-description'>
-                <span style={{ display: 'flex' }}>
-                    <div>
-                        8
-                    </div>
-                    <p className='subtitle'>
-                        {description}
-                    </p>
-                </span>
+            <div className='card-image'>
+
             </div>
-            <div className='card-title'>
-                <h2>
+            <div className='card-description'>
+                <p className="card-title-text text">
                     {title}
-                </h2>
+                </p>
+                <p className='subtitle text'>
+                    {description}
+                </p>
             </div>
         </div>
     )

@@ -1,10 +1,6 @@
 /*
-    About: Basic Title
+    About: Basic Title For Different Categories
 */
-
-// Components
-import Toolbar from '../layout/Toolbar';
-import Title from './Title';
 
 // Types
 type CategoryTitleProps = {
@@ -13,7 +9,11 @@ type CategoryTitleProps = {
 
 const CategoryTitle = ({ title }: CategoryTitleProps) => {
     return (
-        <Title title={title} />
+        <div >
+            <h2 style={{ borderBottom: '3px solid red'}}>
+                {title}
+            </h2>
+        </div>
     )
 };
 

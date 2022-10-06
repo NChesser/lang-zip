@@ -14,19 +14,33 @@ function App() {
 	return (
 		<div>
 			<Toolbar>
-				<h1 className="title">
-					LangZip
-				</h1>
-				<a className="nav-link" href="google.com">
-					Start
-				</a>
-				<a className="nav-link" href="google.com">
-					Categories
-				</a>
-				<div style={{ flexGrow: 1 }} />
-				<a className="nav-link" href="google.com">
-					Language
-				</a>
+				<header className="primary-header flex">
+					<div className="primary-logo">
+						<h1 className="primary-title">
+							LangZip
+						</h1>
+					</div>
+
+					<nav>
+						<ul className="primary-navigation flex">
+							<li>
+								<a href="google.com">
+									Start
+								</a>
+							</li>
+							<li>
+								<a href="google.com">
+									Categories
+								</a>
+							</li>
+							<li>
+								<a href="google.com">
+									Language
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
 			</Toolbar>
 
 			<Home />

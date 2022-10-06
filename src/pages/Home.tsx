@@ -22,12 +22,14 @@ type CategoryProps = {
 
 const Category = ({ category, items }: CategoryProps) => {
     return (
-        <>
+        <div className='category'>
             <CategoryTitle title={category} />
             <Grid>
-                {items.map(item => <Card {...item} />)}
             </Grid>
-        </>
+            <div className='flex'>
+                {items.map(item => <Card {...item} />)}
+            </div>
+        </div>
     )
 };
 
@@ -38,20 +40,22 @@ const Home = () => {
 
     // Functions
     const handleClick = () => {
-        const newCards = [...cards, { title: 'New Card Made ' + cards.length, description: 'Dreaming Spanish' }];
+        const newCards = [...cards, { title: 'Dreaming Spanish', description: 'I want this line to go fror two lines' }];
         setCards(newCards);
     };
 
 
 
     return (
-        <>
+        <div className='container'>
             <Category category="Random" items={cards} />
+            <Category category="Podcasts" items={cards} />
+            <Category category="YouTube" items={cards} />
 
             <button onClick={handleClick}>
                 Click Me
             </button>
-        </>
+        </div>
     )
 };
 
