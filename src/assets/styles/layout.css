@@ -1,4 +1,12 @@
 /* CSS For Layout Components */
+:root {
+    --text-color: hotpink;
+    --super-beginner: skyblue;
+    --beginner: blue;
+    --intermediate: yellow;
+    --advanced: orange;
+    --native: purple;
+}
 
 /* General Utility Classes */
 .flex {
@@ -25,7 +33,7 @@
 
 /* General Styling Classes */
 .title {
-    color: hotpink;
+    color: var(--text-color);
     margin-right: 50px;
 }
 
@@ -38,48 +46,178 @@
     margin: 0;
 }
 
+.disable-gutters {
+    padding: 0;
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.hide-text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Difficulty Meter Styling */
+meter {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    margin: 0.4em auto 0.5em;
+    width: 65%;
+    height: 0.5em;
+
+    border-radius: 2rem;
+
+    /* Applicable only to Firefox */
+    background: none;
+    background-color: rgba(80, 80, 80, 0.5);
+}
+
+meter::-webkit-meter-bar {
+
+    border-radius: 2rem;
+}
+
+meter::-moz-meter-bar {
+    background: none;
+    background-color: rgba(80, 80, 80, 0.5);
+    border-radius: 2rem;
+}
+
+/* Webkit based browsers */
+meter[value="1"]::-webkit-meter-optimum-value {
+    background: var(--super-beginner);
+}
+
+meter[value="2"]::-webkit-meter-optimum-value {
+    background: var(--beginner);
+}
+
+meter[value="3"]::-webkit-meter-optimum-value {
+    background: var(--intermediate);
+}
+
+meter[value="4"]::-webkit-meter-optimum-value {
+    background: var(--advanced);
+}
+
+meter[value="5"]::-webkit-meter-optimum-value {
+    background: var(--native);
+}
+
+/* Gecko based browsers */
+meter[value="1"]::-moz-meter-bar {
+    background: var(--super-beginner);
+}
+
+meter[value="2"]::-moz-meter-bar {
+    background: var(--beginner);
+}
+
+meter[value="3"]::-moz-meter-bar {
+    background: var(--intermediate);
+}
+
+meter[value="4"]::-moz-meter-bar {
+    background: var(--advanced);
+}
+
+meter[value="5"]::-moz-meter-bar {
+    background: var(--native);
+}
+
+
+/* Category Styling */
+.youtube {
+    background-color: crimson;
+}
+
+.netflix {
+    background-color: red;
+}
+
+.spotify {
+    background-color: chartreuse;
+}
+
+.podcast {
+    background-color: darkorchid;
+}
+
+.book {
+    background-color: darkgoldenrod;
+}
+
 
 /* Titlebar */
 .primary-logo {
     margin: 0;
+    padding: 0;
 }
 
 .primary-title {
     color: hotpink;
-    margin-right: 5rem;
+    margin-right: -2rem;
 }
 
 .primary-header {
-    background-color: purple;
     justify-content: space-between;
 }
 
 .primary-navigation {
-    background-color: orange;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .primary-navigation a {
-    color: white;
+    color: #fff;
+    font-size: 16px;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
 }
 
 .primary-navigation a:hover {
-    text-decoration: underline;
+    color: #fff;
 }
+
+.primary-navigation a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.primary-navigation a:hover::before {
+    transform: scaleX(1);
+}
+
 
 
 /* Toolbar */
 .toolbar {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     display: inline-flex;
     width: min(100%);
     background-color: #2b2a27;
-    height: 75px;
 }
 
 /* Grid */
@@ -87,7 +225,6 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
-
     width: min(95%, 70rem);
     margin-inline: auto;
 }
@@ -117,8 +254,27 @@
     background-color: rgb(37, 0, 139);
 }
 
+.card-icon {
+    width: 25px;
+    height: 25px;
+    /* background-color: white; */
+    margin: 0.5rem;
+    border: 2px solid black;
+    justify-self: end;
+}
+
+.card-divider {
+    color: skyblue;
+    background-color: skyblue;
+    height: 2px;
+    width: 95%;
+    margin-top: 0.75rem;
+    margin-left: -1rem;
+}
+
 .card-description {
-    height: 65px;
+    /* height: 65px; */
+    height: 35px;
     margin-bottom: 0.5rem;
 }
 

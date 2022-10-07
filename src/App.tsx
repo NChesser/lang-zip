@@ -14,9 +14,10 @@ function App() {
 	return (
 		<div>
 			<Toolbar>
+
 				<header className="primary-header flex">
 					<div className="primary-logo">
-						<h1 className="primary-title">
+						<h1 className="primary-title disable-gutters">
 							LangZip
 						</h1>
 					</div>

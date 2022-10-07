@@ -9,9 +9,15 @@ import Card from '../components/layout/Card';
 import CategoryTitle from '../components/general/CategoryTitle';
 import Grid from '../components/layout/Grid';
 
+// Helper Modules
+import { sample } from 'lodash';
+
+// Constants
+const cardNames = ['Dreaming Spanish', 'Nick\'s Amazing Adventure', 'Monkey\'s in Space', 'Harry Potter', 'Some Really Long Title With An Interesting Plot']
+
 // Typing
 type CardObj = {
-    title: String
+    title: String | any
 };
 
 type CategoryProps = {
@@ -40,7 +46,8 @@ const Home = () => {
 
     // Functions
     const handleClick = () => {
-        const newCards = [...cards, { title: 'Dreaming Spanish', description: 'I want this line to go fror two lines' }];
+        const title = sample(cardNames);
+        const newCards = [...cards, { title, tags: ['• tag1', '• tag2', '• tag3'] }];
         setCards(newCards);
     };
 
