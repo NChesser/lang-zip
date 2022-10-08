@@ -2,12 +2,7 @@
     About: Basic Grid Component
 */
 
-// Typing
-type GridProps = {
-    children?: JSX.Element | JSX.Element[]
-}
-
-
+// Components
 const Grid = ({ children }: GridProps) => {
 
     return (

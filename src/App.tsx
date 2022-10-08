@@ -3,7 +3,7 @@
 */
 
 // Components
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Toolbar from "./components/layout/Toolbar";
 
 // Styles
