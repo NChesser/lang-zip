@@ -6,6 +6,8 @@
     --intermediate: yellow;
     --advanced: orange;
     --native: purple;
+
+    --default-radius: 0.5rem;
 }
 
 /* General Utility Classes */
@@ -217,7 +219,7 @@ meter[value="5"]::-moz-meter-bar {
     padding-left: 3rem;
     padding-right: 3rem;
     display: inline-flex;
-    width: min(100%);
+    width: min(var(100% - 6rem));
     background-color: #2b2a27;
 }
 
@@ -241,17 +243,22 @@ meter[value="5"]::-moz-meter-bar {
 .card {
     width: 200px;
     background-color: rgb(70, 70, 70, 0.1);
-    border-radius: 0.5rem;
+    border-radius: var(--default-radius);
     padding: 1rem;
 }
 
 .card:hover {
     background-color: rgb(70, 70, 70, 0.5);
+    /* height: 300px; */
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
 }
 
 .card-image {
     height: 175px;
-    border-radius: 0.5rem;
+    border-radius: var(--default-radius);
     background-color: rgb(37, 0, 139);
 }
 
@@ -262,6 +269,17 @@ meter[value="5"]::-moz-meter-bar {
     margin: 0.5rem;
     border: 2px solid black;
     justify-self: end;
+}
+
+.card-overlay {
+    width: 80%;
+    margin-bottom: -30px;
+    justify-self: center;
+    height: 35px;
+    background-color: var(--native);
+    opacity: 0;
+    transition: .5s ease;
+    border-radius: var(--default-radius);
 }
 
 .card-divider {

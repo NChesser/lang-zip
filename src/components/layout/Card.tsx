@@ -28,19 +28,18 @@ const Card = ({ ...props }: CardProps) => {
         <div className='card'>
             <div className='card-image grid'>
                 <div className={"card-icon circle " + sample(colorClasses)} />
+                <div className='card-overlay' />
             </div>
             <div className='card-description'>
                 <p className="card-title-text text hide-text-overflow">
                     {title}
                 </p>
                 <meter min="0" max="5" optimum={5} value={difficultyLevel} />
-                <div className='flex'>
                     {/* {tags && tags.map(tag =>
                         <p className='subtitle text hide-text-overflow'>
                             {tag}
                         </p>
                     )} */}
-                </div>
             </div>
         </div>
     )
