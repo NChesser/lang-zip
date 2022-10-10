@@ -35,7 +35,7 @@ const Card = ({ ...props }: CardProps) => {
                     {title}
                 </p>
                 <meter min="0" max="5" optimum={5} value={difficultyLevel} />
-                    {/* {tags && tags.map(tag =>
+                {/* {tags && tags.map(tag =>
                         <p className='subtitle text hide-text-overflow'>
                             {tag}
                         </p>
