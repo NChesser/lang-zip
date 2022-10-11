@@ -6,7 +6,6 @@ import * as React from 'react';
 
 // Components
 import Category from './Category';
-import Card from '../../components/layout/Card';
 
 // Helper Modules
 import { sample } from 'lodash';
