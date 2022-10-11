@@ -2,12 +2,32 @@
 	About: Main Component
 */
 
+// Routing
+import { Routes, Route, Link } from "react-router-dom";
+
 // Components
 import Home from "./pages/home/Home";
 import Toolbar from "./components/layout/Toolbar";
 
 // Styles
 import "./assets/styles/layout.css";
+
+// Components
+const YouTubeItem = () => {
+	// Props
+	// const { title, description, difficulty } = props;
+	const title = "Dreaming Spanish";
+	const description = "Hello World";
+	const difficulty = "super-beginner";
+
+	return (
+		<div className="container">
+			<h2>{title}</h2>
+			<h4>{difficulty}</h4>
+			<p>{description}</p>
+		</div>
+	)
+};
 
 
 function App() {
@@ -25,14 +45,10 @@ function App() {
 					<nav>
 						<ul className="primary-navigation flex">
 							<li>
-								<a href="google.com">
-									Start
-								</a>
+								<Link to='/'>Start</Link>
 							</li>
 							<li>
-								<a href="google.com">
-									Categories
-								</a>
+								<Link to='/categories'>Categories</Link>
 							</li>
 							<li>
 								<a href="google.com">
@@ -44,7 +60,11 @@ function App() {
 				</header>
 			</Toolbar>
 
-			<Home />
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/categories' element={<p>Categories Page</p>} />
+				<Route path='/youtube/:selectedItem' element={<YouTubeItem />} />
+			</Routes>
 		</div>
 	);
 }

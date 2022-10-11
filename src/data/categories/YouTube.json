@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "type": "youtube", 
+        "title": "Dreaming Spanish",
+        "difficulty": "super-beginner",
+        "description": "Chanel for input comprehensible learning",
+        "url": "https://www.youtube.com/c/DreamingSpanish",
+        "website": "https://www.dreamingspanish.com/",
+        "thumnail": null,
+        "language": [
+            "spanish"
+        ],
+        "subjects": [
+            "youtube",
+            "comprehensible input",
+            "general"
+        ],
+        "partof": [
+            "youtube",
+            "website"
+        ]
+    }
+]
