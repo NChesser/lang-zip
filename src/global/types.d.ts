@@ -12,6 +12,10 @@ type CardProps = {
     type?: String,
 };
 
+type CardItemDisplayProps = {
+    title: String
+};
+
 type CategoryProps = {
     category: String,
     items: Array<CardObj>

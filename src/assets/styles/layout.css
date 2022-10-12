@@ -222,7 +222,9 @@ meter[value="5"]::-moz-meter-bar {
     padding-left: 3rem;
     padding-right: 3rem;
     display: inline-flex;
-    width: min(var(100% - 6rem));
+    /* width: min(var(100% - 6rem)); */
+    width: 100%;
+    overflow: hidden;
     background-color: #2b2a27;
 }
 

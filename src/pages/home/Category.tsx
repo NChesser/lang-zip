@@ -6,6 +6,7 @@
 import Card from '../../components/layout/Card';
 import CategoryTitle from '../../components/general/CategoryTitle';
 
+
 // Components
 const Category = ({ category, items }: CategoryProps) => {
     return (

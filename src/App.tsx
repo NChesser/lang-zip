@@ -34,7 +34,6 @@ function App() {
 	return (
 		<div>
 			<Toolbar>
-
 				<header className="primary-header flex">
 					<div className="primary-logo">
 						<h1 className="primary-title disable-gutters">
@@ -51,9 +50,7 @@ function App() {
 								<Link to='/categories'>Categories</Link>
 							</li>
 							<li>
-								<a href="google.com">
-									Language
-								</a>
+								<Link to='/languages'>Languages</Link>
 							</li>
 						</ul>
 					</nav>
