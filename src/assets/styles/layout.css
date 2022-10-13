@@ -8,7 +8,7 @@
     --native: gold;
 
     --default-radius: 0.5rem;
-    
+
     /* Component Vars */
     --card-color: 70, 70, 70;
 }
@@ -19,6 +19,9 @@
     gap: var(--gap, 2rem);
 }
 
+
+
+/* Layout Styling */
 .flex-grow {
     flex-grow: 1;
 }
@@ -29,10 +32,18 @@
 }
 
 .container {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.home-container {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin-top: -10vh;
 }
 
 
@@ -219,11 +230,11 @@ meter[value="5"]::-moz-meter-bar {
 .toolbar {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
     display: inline-flex;
     /* width: min(var(100% - 6rem)); */
-    width: 100%;
+    width: 90vw;
     overflow: hidden;
     background-color: #2b2a27;
 }
@@ -309,4 +320,17 @@ meter[value="5"]::-moz-meter-bar {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
     font-weight: bold;
+}
+
+/* Buttons */
+.button-basic {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    background-color: rgb(76, 51, 143);
+    color: white;
+}
+
+.button-basic:hover {
+    cursor: pointer;
 }

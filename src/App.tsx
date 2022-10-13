@@ -7,6 +7,7 @@ import { Routes, Route, Link } from "react-router-dom";
 
 // Components
 import Home from "./pages/home/Home";
+import Start from "./pages/home/Start";
 import Toolbar from "./components/layout/Toolbar";
 
 // Styles
@@ -29,6 +30,8 @@ const YouTubeItem = () => {
 	)
 };
 
+// TODO: State Managemetn
+
 
 function App() {
 	return (
@@ -37,14 +40,13 @@ function App() {
 				<header className="primary-header flex">
 					<div className="primary-logo">
 						<h1 className="primary-title disable-gutters">
-							LangZip
+							<Link to='/'>LangZip</Link>
 						</h1>
 					</div>
-
 					<nav>
 						<ul className="primary-navigation flex">
 							<li>
-								<Link to='/'>Start</Link>
+								<Link to='/start'>Start</Link>
 							</li>
 							<li>
 								<Link to='/categories'>Categories</Link>
@@ -56,9 +58,9 @@ function App() {
 					</nav>
 				</header>
 			</Toolbar>
-
 			<Routes>
 				<Route path='/' element={<Home />} />
+				<Route path='/start' element={<Start />} />
 				<Route path='/categories' element={<p>Categories Page</p>} />
 				<Route path='/youtube/:selectedItem' element={<YouTubeItem />} />
 			</Routes>
