@@ -3,7 +3,7 @@
 */
 
 // Routing
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 // Components
 import Home from "./pages/home/Home";
@@ -34,13 +34,15 @@ const YouTubeItem = () => {
 
 
 function App() {
+	const navigate = useNavigate();
+
 	return (
 		<div>
 			<Toolbar>
-				<header className="primary-header flex">
+				<header className="app-toolbar primary-header flex">
 					<div className="primary-logo">
-						<h1 className="primary-title disable-gutters">
-							<Link to='/'>LangZip</Link>
+						<h1 className="primary-title disable-gutters" onClick={() => navigate('/')}>
+							LangZip
 						</h1>
 					</div>
 					<nav>

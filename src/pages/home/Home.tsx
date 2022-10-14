@@ -17,13 +17,13 @@ const Home = () => {
     const navigate = useNavigate();
 
     return (
-        <div className='home-container'>
-            <h1>
-                Welcome To This Amazing App
+        <div className='home-container disable-gutters'>
+            <h1 className='home-title disable-gutters'>
+                Your Language Library Catalogue
             </h1>
-            <h3>
-                Lots Cool Stuff Here
-            </h3>
+            <p className='home-subtitle'>
+                Language learning through immersion, the fun way!
+            </p>
             <Button title="Start Here" onClick={() => navigate('/start')} />
         </div>
     )

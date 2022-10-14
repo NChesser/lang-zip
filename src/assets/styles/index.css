@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Didact Gothic', 'Segoe UI', 'Roboto', 'Oxygen',
+	/* font-family: -apple-system, BlinkMacSystemFont, 'Didact Gothic', 'Segoe UI', 'Roboto', 'Oxygen',
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
+		sans-serif; */
+		font-family: 'Kanit';
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: white;
 	background-color: #0d0c0c;
+	/* background-color: rgb(44, 119, 94); */
 }
 
 code {

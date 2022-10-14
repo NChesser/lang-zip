@@ -1,16 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+
 /* CSS For Layout Components */
 :root {
+    --background-color: #0d0c0c;
+    --primary-color: rgb(46, 150, 51);
+
+    /* Levels Colors */
     --text-color: hotpink;
     --super-beginner: rgb(59, 218, 230);
-    --beginner: rgb(7, 117, 49);
+    --beginner: rgb(46, 150, 51);
     --intermediate: rgb(235, 231, 44);
     --advanced: rgb(248, 177, 46);
     --native: gold;
 
-    --default-radius: 0.5rem;
-
+    /* Text Colors */
+    --subtitle-color: rgb(214, 214, 214);
+    
     /* Component Vars */
     --card-color: 70, 70, 70;
+
+    --default-radius: 0.5rem;
 }
 
 /* General Utility Classes */
@@ -38,13 +48,6 @@
     margin-bottom: 3vh;
 }
 
-.home-container {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-    margin-top: -10vh;
-}
 
 
 /* General Styling Classes */
@@ -183,8 +186,14 @@ meter[value="5"]::-moz-meter-bar {
 }
 
 .primary-title {
-    color: hotpink;
+    /* color: hotpink; */
     margin-right: -2rem;
+    font-size: 35px;
+    background: linear-gradient(0deg, var(--beginner) 15%, var(--background-color) 0%);
+}
+
+.primary-title:hover {
+    cursor: pointer;
 }
 
 .primary-header {
@@ -197,17 +206,17 @@ meter[value="5"]::-moz-meter-bar {
 
 .primary-navigation a {
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     font-weight: bold;
     position: relative;
 }
 
 .primary-navigation a:hover {
-    color: #fff;
+    color: var(--subtitle-color);
 }
 
-.primary-navigation a::before {
+/* .primary-navigation a::before {
     content: "";
     position: absolute;
     display: block;
@@ -215,14 +224,14 @@ meter[value="5"]::-moz-meter-bar {
     height: 2px;
     bottom: -3px;
     left: 0;
-    background-color: #fff;
+    background-color: var(--subtitle-color);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
 
 .primary-navigation a:hover::before {
     transform: scaleX(1);
-}
+} */
 
 
 
@@ -236,7 +245,7 @@ meter[value="5"]::-moz-meter-bar {
     /* width: min(var(100% - 6rem)); */
     width: 90vw;
     overflow: hidden;
-    background-color: #2b2a27;
+    /* background-color: #2b2a27; */
 }
 
 /* Grid */
@@ -320,17 +329,47 @@ meter[value="5"]::-moz-meter-bar {
     margin-top: 0.75rem;
     margin-bottom: 0.25rem;
     font-weight: bold;
+    font-size: 20px;
 }
 
 /* Buttons */
 .button-basic {
-    padding: 10px 20px;
+    border-radius: var(--default-radius);
+    padding: 10px 40px;
     border: none;
     font-size: 16px;
-    background-color: rgb(76, 51, 143);
+    background-color: var(--primary-color);
     color: white;
+    font-weight: bold;
 }
 
 .button-basic:hover {
     cursor: pointer;
+}
+
+
+
+/* Pages */
+
+/* Home */
+.home-container {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin-top: -15vh;
+}
+
+.home-title {
+    font-size: 65px;
+    font-weight: bold;
+    background: linear-gradient(0deg, var(--beginner) 15%, var(--background-color) 0%);
+    padding: 0;
+    margin: 0;
+}
+
+.home-subtitle {
+    color: var(--subtitle-color);
+    font-size: 22px;
+    font-weight: 500;
 }
