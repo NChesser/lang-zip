@@ -30,7 +30,6 @@ const Card = ({ ...props }: CardProps) => {
         <div className='card' onClick={() => navigate(`/${type}/${title}`)}>
             <div className='card-image grid'>
                 <div className={"card-icon circle " + sample(colorClasses)} />
-                <div className='card-overlay' />
             </div>
             <div className='card-description'>
                 <p className="card-title-text text hide-text-overflow">
