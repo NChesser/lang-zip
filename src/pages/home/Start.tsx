@@ -33,7 +33,6 @@ const Start = () => {
         setCards(newCards);
     };
 
-
     return (
         <div className='container'>
             <Category category="Random" items={cards} />

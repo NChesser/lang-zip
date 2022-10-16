@@ -20,6 +20,9 @@
     /* Component Vars */
     --card-color: 70, 70, 70;
 
+    /* Layout Constants */
+    --default-left: 3vw;
+    --default-right: 3vw;
     --default-radius: 0.5rem;
 }
 
@@ -42,8 +45,8 @@
 }
 
 .container {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: var(--default-left);
+    margin-right: var(--default-right);
     margin-top: 3vh;
     margin-bottom: 3vh;
 }
@@ -239,8 +242,8 @@ meter[value="5"]::-moz-meter-bar {
 .toolbar {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: var(--default-left);
+    padding-right: var(--default-right);
     display: inline-flex;
     /* width: min(var(100% - 6rem)); */
     width: 90vw;
@@ -345,6 +348,16 @@ meter[value="5"]::-moz-meter-bar {
 
 .button-basic:hover {
     cursor: pointer;
+}
+
+
+/* Animations */
+.firefly {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+
 }
 
 

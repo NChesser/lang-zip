@@ -3,6 +3,17 @@ type CardObj = {
     title: String
 };
 
+// Contexts
+type LibaryItem = {
+    title: String
+};
+
+type LibraryContextType = {
+    libraryItems: LibraryItem[],
+    selectedItem?: LibaryItem | null,
+    handleSelectedItem: (item: LibraryItem) => void
+};
+
 
 // Component Props
 type CardProps = {
