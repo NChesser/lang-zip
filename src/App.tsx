@@ -15,12 +15,13 @@ import Toolbar from "./components/layout/Toolbar";
 // Styles
 import "./assets/styles/layout.css";
 
-// Example Data
-import YouTube from './data/categories/YouTube.json';
-
-
 // Context
-const LibraryContext = React.createContext<LibraryContextType>({ libraryItems: [{ title: 'Hello' }], handleSelectedItem: () => console.log('Hello World') });
+import LibraryProvider, { LibraryContext } from './context/LibraryContext';
+
+// Helpers
+import { get } from 'lodash';
+
+
 
 // Components
 const YouTubeItem = () => {
@@ -34,8 +35,8 @@ const YouTubeItem = () => {
 	React.useEffect(() => {
 		let index = 0;
 
-		libraryItems.forEach((item, count) => {
-			if (location?.pathname.match(item.title)) {
+		libraryItems && libraryItems.forEach((item, count) => {
+			if (location?.pathname.match(item.title.toString())) {
 				index = count;
 			}
 		});
@@ -65,18 +66,9 @@ const YouTubeItem = () => {
 function App() {
 	const navigate = useNavigate();
 
-	const libraryItems = YouTube;
-	const [selectedItem, setSelectedItem] = React.useState<LibaryItem>(YouTube[0]);
-
-	const handleSelectedItem = (item: LibaryItem) => {
-		setSelectedItem(item);
-	};
-
-
-
 
 	return (
-		<LibraryContext.Provider value={{ libraryItems, selectedItem, handleSelectedItem }}>
+		<LibraryProvider>
 			<div>
 				<Toolbar>
 					<header className="app-toolbar primary-header flex">
@@ -110,7 +102,7 @@ function App() {
 					</Routes>
 				</main>
 			</div>
-		</LibraryContext.Provider>
+		</LibraryProvider>
 	);
 }
 

@@ -4,13 +4,15 @@ type CardObj = {
 };
 
 // Contexts
-type LibaryItem = {
-    title: String
+type LibraryItem = {
+    id: number,
+    title: String,
+    description?: String
 };
 
 type LibraryContextType = {
     libraryItems: LibraryItem[],
-    selectedItem?: LibaryItem | null,
+    selectedItem: LibraryItem,
     handleSelectedItem: (item: LibraryItem) => void
 };
 
