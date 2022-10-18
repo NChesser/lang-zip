@@ -9,6 +9,7 @@ import CategoryTitle from '../../components/general/CategoryTitle';
 
 // Components
 const Category = ({ category, items }: CategoryProps) => {
+    console.log("🚀 ~ file: Category.tsx ~ line 12 ~ Category ~ items", items)
     return (
         <div className='category'>
             <CategoryTitle title={category} />

@@ -5,9 +5,13 @@ type CardObj = {
 
 // Contexts
 type LibraryItem = {
-    id: number,
+    id?: number,
+    type?: String,
     title: String,
-    description?: String
+    difficulty?: String,
+    description?: String,
+    url?: String,
+    genres?: Array<String>
 };
 
 type LibraryContextType = {
@@ -19,10 +23,7 @@ type LibraryContextType = {
 
 // Component Props
 type CardProps = {
-    title: String,
-    description?: String,
-    tags?: Array<String>,
-    type?: String,
+    LibraryItem
 };
 
 type CardItemDisplayProps = {

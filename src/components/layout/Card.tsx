@@ -5,24 +5,28 @@
 import * as React from 'react';
 
 // Routing
-import { useNavigate, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Helper Modules
-import { sample, random } from 'lodash';
+import { sample, random, indexOf } from 'lodash';
 
 // Context
 import { LibraryContext } from '../../context/LibraryContext';
 
-// Components
-import CardItem from "../../pages/home/CardItem";
-
 // Constants
 const colorClasses = ['youtube', 'netflix', 'spotify', 'podcast', 'book'];
+const difficultyLevels = [
+    'super-beginner',
+    'beginner',
+    'intermediate',
+    'advanced',
+    'native'
+];
 
 
-const Card = ({ ...props }: CardProps) => {
+const Card = ({ ...props }: LibraryItem) => {
     // Props
-    const { title, type } = props;
+    const { title, difficulty, type } = props;
 
     // Context
     const { libraryItems, handleSelectedItem } = React.useContext(LibraryContext);
@@ -31,7 +35,7 @@ const Card = ({ ...props }: CardProps) => {
     const navigate = useNavigate();
 
     // Functions
-    const difficultyLevel = random(1, 5);
+    const difficultyLevel = indexOf(difficultyLevels, difficulty) + 1;
 
     const handleNavigate = async () => {
         let index = 0;
@@ -44,17 +48,15 @@ const Card = ({ ...props }: CardProps) => {
         // Set Selected Item
         handleSelectedItem(libraryItems[index]);
 
-
         // Navigate to page
         navigate(`/${type}/${title}`)
-    }
-
+    };
 
 
     return (
         <div className='card' onClick={handleNavigate}>
             <div className='card-image grid'>
-                <div className={"card-icon circle " + sample(colorClasses)} />
+                <div className={"card-icon circle " + type} />
             </div>
             <div className='card-description'>
                 <p className="card-title-text text hide-text-overflow">

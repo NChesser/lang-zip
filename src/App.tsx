@@ -9,35 +9,16 @@ import { Routes, Route, Link, useNavigate, useLocation } from "react-router-dom"
 
 // Components
 import Home from "./pages/home/Home";
-import Start from "./pages/home/Start";
+import Start from "./pages/start/Start";
+import LibraryItem from "./pages/LibraryItem";
 import Toolbar from "./components/layout/Toolbar";
 
 // Styles
 import "./assets/styles/layout.css";
 
 // Context
-import LibraryProvider, { LibraryContext } from './context/LibraryContext';
+import LibraryProvider from './context/LibraryContext';
 
-// Helpers
-import { get } from 'lodash';
-
-
-
-// Components
-const YouTubeItem = () => {
-	// Context
-	const { selectedItem } = React.useContext(LibraryContext);
-
-
-	return (
-		<div className="container">
-			<h2>{selectedItem?.title}</h2>
-			<p>{selectedItem?.description}</p>
-		</div>
-	)
-};
-
-// TODO: State Managemetn
 
 
 function App() {
@@ -75,7 +56,7 @@ function App() {
 						<Route path='/' element={<Home />} />
 						<Route path='/start' element={<Start />} />
 						<Route path='/categories' element={<p>Categories Page</p>} />
-						<Route path='/youtube/:selectedItem' element={<YouTubeItem />} />
+						<Route path='/youtube/:selectedItem' element={<LibraryItem />} />
 					</Routes>
 				</main>
 			</div>

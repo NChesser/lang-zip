@@ -11,7 +11,7 @@
         "language": [
             "spanish"
         ],
-        "subjects": [
+        "genres": [
             "youtube",
             "comprehensible input",
             "general"
@@ -25,7 +25,7 @@
         "id": 1,
         "type": "youtube", 
         "title": "Nero",
-        "difficulty": "super-beginner",
+        "difficulty": "intermediate",
         "description": "Nick's Gaming Channel",
         "url": "https://www.youtube.com/c/DreamingSpanish",
         "website": "https://www.dreamingspanish.com/",
@@ -33,7 +33,7 @@
         "language": [
             "spanish"
         ],
-        "subjects": [
+        "genres": [
             "youtube",
             "comprehensible input",
             "general"
