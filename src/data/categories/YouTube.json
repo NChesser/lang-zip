@@ -42,5 +42,50 @@
             "youtube",
             "website"
         ]
+    },
+    {
+        "id": 1,
+        "type": "youtube", 
+        "title": "How to Spanish",
+        "difficulty": "advanced",
+        "description": "Nick's Gaming Channel",
+        "url": "https://www.youtube.com/c/DreamingSpanish",
+        "website": "https://www.dreamingspanish.com/",
+        "thumnail": null,
+        "language": [
+            "spanish"
+        ],
+        "genres": [
+            "youtube",
+            "comprehensible input",
+            "general"
+        ],
+        "partof": [
+            "youtube",
+            "website"
+        ]
+    }
+    ,
+    {
+        "id": 1,
+        "type": "youtube", 
+        "title": "Moe",
+        "difficulty": "beginner",
+        "description": "Nick's Gaming Channel",
+        "url": "https://www.youtube.com/c/DreamingSpanish",
+        "website": "https://www.dreamingspanish.com/",
+        "thumnail": null,
+        "language": [
+            "spanish"
+        ],
+        "genres": [
+            "youtube",
+            "comprehensible input",
+            "general"
+        ],
+        "partof": [
+            "youtube",
+            "website"
+        ]
     }
 ]

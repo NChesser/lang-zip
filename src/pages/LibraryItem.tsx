@@ -20,7 +20,7 @@ const LibraryItem = () => {
 
             </div>
             <div>
-                <h2>{selectedItem?.title}</h2>
+                <h2 className='disable-gutters'>{selectedItem?.title}</h2>
                 <p className='subtitle'>{selectedItem?.description}</p>
 
                 <p>Generes: {(selectedItem.genres || []).map(genre => <span>{genre}, </span>)}</p>
