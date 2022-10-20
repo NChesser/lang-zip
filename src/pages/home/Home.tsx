@@ -58,15 +58,20 @@ const Home = () => {
 
 
     return (
-        <div className='home-container disable-gutters'>
-            <Firefly id={1} />
-            <h1 className='home-title disable-gutters'>
-                Your Language Library Catalogue
-            </h1>
-            <p className='home-subtitle'>
-                Language learning through immersion a.k.a. the fun way!
-            </p>
-            <Button title="Start Here" onClick={() => navigate('/start')} />
+        <div>
+            <section className='home-container disable-gutters home-title-section'>
+                <Firefly id={1} />
+                <h1 className='home-title disable-gutters'>
+                    Your Language Library Catalogue
+                </h1>
+                <p className='home-subtitle'>
+                    Language learning through immersion a.k.a. the fun way!
+                </p>
+                <Button title="Start Here" onClick={() => navigate('/start')} />
+            </section>
+            <section className='home-container disable-gutters home-info'>
+
+            </section>
         </div>
     )
 };

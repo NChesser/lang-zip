@@ -87,5 +87,27 @@
             "youtube",
             "website"
         ]
+    },
+    {
+        "id": 1,
+        "type": "youtube", 
+        "title": "Shyness",
+        "difficulty": "advanced",
+        "description": "Shyness",
+        "url": "https://youtu.be/zE6fidDPT1g",
+        "website": "https://www.dreamingspanish.com/",
+        "thumnail": null,
+        "language": [
+            "spanish"
+        ],
+        "genres": [
+            "youtube",
+            "comprehensible input",
+            "general"
+        ],
+        "partof": [
+            "youtube",
+            "website"
+        ]
     }
 ]

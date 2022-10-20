@@ -375,7 +375,11 @@ meter[value="5"]::-moz-meter-bar {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+}
+
+.home-title-section {
     margin-top: -15vh;
+    min-height: 110vh;
 }
 
 .home-title {
@@ -390,4 +394,8 @@ meter[value="5"]::-moz-meter-bar {
     color: var(--subtitle-color);
     font-size: 22px;
     font-weight: 500;
+}
+
+.home-info {
+    background-color: aliceblue;
 }

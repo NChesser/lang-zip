@@ -10,7 +10,7 @@ type LibraryItem = {
     title: String,
     difficulty?: String,
     description?: String,
-    url?: String,
+    url?: string,
     genres?: Array<String>
 };
 
