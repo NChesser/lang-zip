@@ -60,7 +60,6 @@ const Home = () => {
     return (
         <div>
             <section className='home-container disable-gutters home-title-section'>
-                <Firefly id={1} />
                 <h1 className='home-title disable-gutters'>
                     Your Language Library Catalogue
                 </h1>
